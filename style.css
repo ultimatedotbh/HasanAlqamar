@@ -3,21 +3,16 @@ font-family:'Tajawal',sans-serif;
 box-sizing:border-box;
 }
 
-html,body{
+body{
 margin:0;
-width:100%;
-min-height:100vh;
-overflow-x:hidden;
+height:100vh;
 background:linear-gradient(135deg,#0f172a,#020617);
 color:white;
 }
 
-/* الصفحة الرئيسية */
-
 .container{
 
-width:92%;
-max-width:500px;
+width:500px;
 
 margin:auto;
 
@@ -25,7 +20,7 @@ margin-top:10vh;
 
 text-align:center;
 
-padding:40px;
+padding:50px;
 
 border-radius:20px;
 
@@ -39,7 +34,7 @@ border:1px solid rgba(255,255,255,0.15);
 
 .title{
 
-font-size:clamp(28px,5vw,40px);
+font-size:40px;
 
 margin-bottom:30px;
 
@@ -51,7 +46,7 @@ width:100%;
 
 padding:18px;
 
-font-size:18px;
+font-size:20px;
 
 border:none;
 
@@ -60,7 +55,6 @@ border-radius:12px;
 cursor:pointer;
 
 background:linear-gradient(45deg,#0ea5e9,#0284c7);
-
 color:white;
 
 margin-top:10px;
@@ -100,10 +94,10 @@ font-size:18px;
 }
 
 .hidden{
-display:none;
-}
 
-/* صندوق المسابقة */
+display:none;
+
+}
 
 .quizContainer{
 
@@ -114,21 +108,17 @@ left:50%;
 
 transform:translate(-50%,-50%);
 
-width:92%;
-
-max-width:900px;
+width:900px;
 
 }
 
-/* السؤال */
-
 .question{
 
-padding:40px;
+padding:45px;
 
-font-size:clamp(20px,3vw,32px);
+font-size:32px;
 
-margin-bottom:35px;
+margin-bottom:40px;
 
 text-align:center;
 
@@ -140,23 +130,21 @@ backdrop-filter:blur(12px);
 
 }
 
-/* الإجابات */
-
 .answers{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:1fr 1fr;
 
-gap:20px;
+gap:25px;
 
 }
 
 .answer{
 
-padding:25px;
+padding:30px;
 
-font-size:20px;
+font-size:22px;
 
 border:none;
 
@@ -174,11 +162,11 @@ transition:0.25s;
 
 .answer:hover{
 
-transform:scale(1.05);
+transform:scale(1.07);
 
 }
 
-/* ألوان الإجابات */
+/* ألوان مثل كاهوت */
 
 .red{
 background:#ef4444;
@@ -194,7 +182,6 @@ color:black;
 }
 
 
-/* الاشعارات */
 
 .notification{
 
@@ -216,8 +203,6 @@ border-radius:8px;
 
 }
 
-/* النجوم */
-
 .stars{
 
 position:fixed;
@@ -230,11 +215,7 @@ background:url("https://www.transparenttextures.com/patterns/stardust.png");
 
 opacity:0.25;
 
-pointer-events:none;
-
 }
-
-/* المؤقت */
 
 .timer{
 
@@ -244,7 +225,7 @@ top:20px;
 
 right:25px;
 
-font-size:18px;
+font-size:20px;
 
 background:rgba(255,255,255,0.1);
 
@@ -255,30 +236,21 @@ padding:10px 16px;
 border-radius:10px;
 
 }
-
-/* الاشعارات */
-
 #notifications {
-
 position: fixed;
-
 top: 60px;
-
 right: 30px;
-
 display: flex;
-
 flex-direction: column;
-
 align-items: flex-end;
-
 gap: 12px;
-
 }
 
 /* صفحة لوحة الترتيب */
 
 .scoreboardPage{
+
+background:#0f172a;
 
 min-height:100vh;
 
@@ -288,19 +260,17 @@ justify-content:center;
 
 align-items:center;
 
-}
+font-family:'Tajawal',sans-serif;
 
-/* صندوق لوحة الترتيب */
+}
 
 .scoreboardWrapper{
 
-width:92%;
-
-max-width:700px;
+width:700px;
 
 background:white;
 
-padding:30px;
+padding:35px;
 
 border-radius:14px;
 
@@ -308,15 +278,13 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 
 }
 
-/* العنوان */
-
 .scoreTitle{
 
 text-align:center;
 
 margin-bottom:25px;
 
-font-size:26px;
+font-size:28px;
 
 color:#111827;
 
@@ -360,18 +328,34 @@ text-align:center;
 
 border-bottom:1px solid #e5e7eb;
 
-background:linear-gradient(135deg,#3d2c00,#6b4f00);
+/* الخلفية الذهبية */
 
-color:white;
+background:linear-gradient(
+135deg,
+#3d2c00,
+#6b4f00
+);
+
+color:#fff;
 
 font-weight:500;
+
+}
+
+/* hover */
+
+#table tbody tr:hover{
+
+background:#f3f4f6;
 
 }
 
 /* الترتيب */
 
 .rank{
+
 font-weight:bold;
+
 }
 
 /* الدرجة */
@@ -384,18 +368,44 @@ color:#ffd700;
 
 }
 
-/* الصفوف الأولى */
+/* أول ثلاثة */
 
 #table tbody tr:nth-child(1){
-background:#8b6a00;
+
+background:#b18d00;
+
 }
 
 #table tbody tr:nth-child(2){
-background:#6b5200;
+
+background:#e5e7eb;
+
 }
 
 #table tbody tr:nth-child(3){
-background:#4d3a00;
+
+background:#614e00;
+
+}
+
+.credits{
+
+position:fixed;
+
+bottom:10px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:12px;
+
+color:rgba(255,255,255,0.6);
+
+font-family:'Tajawal',sans-serif;
+
+letter-spacing:1px;
+
 }
 
 #table tbody tr{
@@ -412,55 +422,88 @@ background:#2b2100;
 
 }
 
-/* الحقوق */
+#table tbody tr:nth-child(1){
+background:#8b6a00;
+}
 
-.credits{
+#table tbody tr:nth-child(2){
+background:#6b5200;
+}
 
-position:fixed;
-
-bottom:10px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-font-size:12px;
-
-color:rgba(255,255,255,0.6);
-
-letter-spacing:1px;
-
+#table tbody tr:nth-child(3){
+background:#4d3a00;
 }
 
 /* دعم الجوال */
 
 @media (max-width:768px){
 
+.container{
+
+width:90%;
+
+padding:30px;
+
+}
+
 .quizContainer{
-width:95%;
+
+width:90%;
+
 }
 
 .question{
+
+font-size:22px;
+
 padding:25px;
+
+}
+
+/* الإجابات تصبح عمود */
+
+.answers{
+
+grid-template-columns:1fr;
+
+gap:15px;
+
 }
 
 .answer{
+
 padding:18px;
+
 font-size:18px;
+
 }
+
+/* العداد */
 
 .timer{
+
 top:10px;
+
 right:10px;
+
 font-size:16px;
+
 }
 
+/* لوحة الترتيب */
+
 .scoreboardWrapper{
+
+width:95%;
+
 padding:20px;
+
 }
 
 #table{
+
 font-size:14px;
+
 }
 
 }
