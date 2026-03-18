@@ -330,6 +330,18 @@ text-align:center;
 
 border-bottom:1px solid #e5e7eb;
 
+/* الخلفية الذهبية */
+
+background:linear-gradient(
+135deg,
+#3d2c00,
+#6b4f00
+);
+
+color:#fff;
+
+font-weight:500;
+
 }
 
 /* hover */
@@ -354,7 +366,7 @@ font-weight:bold;
 
 font-weight:900;
 
-color:#e0e0e0;
+color:#ffd700;
 
 }
 
@@ -396,4 +408,30 @@ font-family:'Tajawal',sans-serif;
 
 letter-spacing:1px;
 
+}
+
+#table tbody tr{
+
+transition:0.2s;
+
+}
+
+#table tbody tr:hover{
+
+transform:scale(1.01);
+
+background:#2b2100;
+
+}
+
+#table tbody tr:nth-child(1){
+background:#8b6a00;
+}
+
+#table tbody tr:nth-child(2){
+background:#6b5200;
+}
+
+#table tbody tr:nth-child(3){
+background:#4d3a00;
 }
